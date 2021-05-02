@@ -1,0 +1,188 @@
+body {
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Manrope', sans-serif;
+  color: hsl(217, 19%, 35%);
+}
+
+p {
+  font-size: 13px;
+  color: hsl(214, 17%, 51%);
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.bg-cover-image {
+  background-image: url(images/drawers.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.content-side {
+  padding: 40px;
+}
+
+.content-side-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.author {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5em 0;
+    position: relative;
+}
+
+.michelle-image {
+  width: 17%;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.michelle-details {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.michelle-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.michelle-post-date {
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+.share-button {
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 100%;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+/* Tootltip */
+
+.share-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-content {
+  visibility: hidden;
+  width: 270px;
+  background-color: hsl(217, 19%, 35%);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -137px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip-share-text {
+  color: hsl(212, 23%, 69%);
+  letter-spacing: 3px;
+  padding: 5px;
+}
+
+.icons {
+  font-size: 1.5rem;
+  padding: 8px;
+}
+
+.tooltip-content::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+
+.share-button:hover {
+  cursor: pointer;
+}
+
+/* JS Toggle Classes */
+.tooltip-show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.share-button-clicked {
+  background-color: hsl(217, 19%, 35%);
+  color: #ffffff;
+}
+
+
+@media (max-width: 991px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .content-side {
+    padding: 0;
+  }
+
+  .description {
+    padding: 40px;
+  }
+
+  .author {
+    padding: 0 40px 20px;
+  }
+
+  .bg-cover-image {
+    min-height: 250px;
+    border-radius: 10px 10px 0 0;
+  }
+
+/* Add JS Classes when clicked */
+  .share-tooltip-clicked-md {
+    background-color: hsl(217, 19%, 35%);
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    padding: 1.8em;
+    padding-left: 2.5em;
+    padding-bottom: 2em;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .tooltip-content-clicked-md {
+    z-index: 1;
+    bottom: 22%;
+    left: 2%;
+    margin-left: 0;
+  }
+
+  .share-button-clicked-md {
+    position: relative;
+    left: 90%;
+  }
+
+}
